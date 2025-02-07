@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Will You Be My Valentine, Saqlain?</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div class="container text-center valentine-container">
+        <div class="row">
+            <div class="col-12">
+                <h1 class="display-4 mb-4">Saqlain, Will You Be My Valentine?</h1>
+                
+                <div class="proposal-section">
+                    <div class="heart-image mb-4">
+                        <img src="https://em-content.zobj.net/thumbs/120/apple/354/red-heart_2764-fe0f.png" alt="Heart Emoji" class="img-fluid">
+                    </div>
+                    
+                    <div class="proposal-buttons">
+                        <button id="yesButton" class="btn btn-primary btn-lg me-3">Yes, I Will!</button>
+                        <button id="noButton" class="btn btn-danger btn-lg">No, Thanks</button>
+                    </div>
+                    
+                    <div id="responseMessage" class="mt-4 d-none">
+                        <h2 class="text-success"></h2>
+                    </div>
+                </div>
+                
+                <div id="musicSection" class="mt-5 d-none">
+                    <h3>Our Love Playlist</h3>
+                    <div class="row">
+                        <!-- Rose Day -->
+                        <div class="col-12 col-md-6 offset-md-3 mb-4">
+                            <div class="day-card">
+                                <h3 class="card-title">Rose Day</h3>
+                                <img src="https://img.icons8.com/color/96/000000/rose.png" alt="Rose" class="day-icon">
+                                <p class="card-text">A rose for every moment we've shared</p>
+                                <div class="music-player">
+                                    <h5>Today's Love Song</h5>
+                                    <p>"Perfect" - Ed Sheeran</p>
+                                    <audio controls class="w-100">
+                                        <source src="songs/Perfect-(Mr-Jat.in).mp3" type="audio/mpeg">
+                                        Your browser does not support the audio element.
+                                    </audio>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Propose Day -->
+                        <div class="col-12 col-md-6 offset-md-3 mb-4">
+                            <div class="day-card">
+                                <h3 class="card-title">Propose Day</h3>
+                                <img src="https://img.icons8.com/color/96/000000/engagement-ring.png" alt="Ring" class="day-icon">
+                                <p class="card-text">The day I want to promise forever</p>
+                                <div class="music-player">
+                                    <h5>Today's Love Song</h5>
+                                    <p>"Marry You" - Bruno Mars</p>
+                                    <audio controls class="w-100">
+                                        <source src="songs/Marry You .mp3" type="audio/mpeg">
+                                        Your browser does not support the audio element.
+                                    </audio>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Chocolate Day -->
+                        <div class="col-12 col-md-6 offset-md-3 mb-4">
+                            <div class="day-card">
+                                <h3 class="card-title">Chocolate Day</h3>
+                                <img src="https://em-content.zobj.net/thumbs/120/apple/354/chocolate-bar_1f36b.png" alt="Chocolate" class="day-icon">
+                                <p class="card-text">Sweet moments, sweeter than chocolate</p>
+                                <div class="music-player">
+                                    <h5>Today's Love Song</h5>
+                                    <p>"How Sweet It Is (To Be Loved by You)"</p>
+                                    <audio controls class="w-100">
+                                        <source src="songs/How Sweet It Is (To Be Loved by You).mp3" type="audio/mpeg">
+                                        Your browser does not support the audio element.
+                                    </audio>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Teddy Day -->
+                        <div class="col-12 col-md-6 offset-md-3 mb-4">
+                            <div class="day-card">
+                                <h3 class="card-title">Teddy Day</h3>
+                                <img src="https://img.icons8.com/color/96/000000/teddy-bear.png" alt="Teddy" class="day-icon">
+                                <p class="card-text">A teddy bear hug, just for you</p>
+                                <div class="music-player">
+                                    <h5>Today's Love Song</h5>
+                                    <p>"Lucky" - Jason Mraz & Colbie Caillat</p>
+                                    <audio controls class="w-100">
+                                        <source src="songs/Lucky - Jason Mraz Colbie Caillat [Vietsub  Lyrics].mp3" type="audio/mpeg">
+                                        Your browser does not support the audio element.
+                                    </audio>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Promise Day -->
+                        <div class="col-12 col-md-6 offset-md-3 mb-4">
+                            <div class="day-card">
+                                <h3 class="card-title">Promise Day</h3>
+                                <img src="https://img.icons8.com/color/96/000000/pinky-promise.png" alt="Promise" class="day-icon">
+                                <p class="card-text">Promises that last a lifetime</p>
+                                <div class="music-player">
+                                    <h5>Today's Love Song</h5>
+                                    <p>"Thinking Out Loud" - Ed Sheeran</p>
+                                    <audio controls class="w-100">
+                                        <source src="songs/Ed Sheeran - Thinking Out Loud (Lyrics).mp3" type="audio/mpeg">
+                                        Your browser does not support the audio element.
+                                    </audio>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Hug Day -->
+                        <div class="col-12 col-md-6 offset-md-3 mb-4">
+                            <div class="day-card">
+                                <h3 class="card-title">Hug Day</h3>
+                                <img src="https://img.icons8.com/emoji/96/hugging-face.png" alt="Hug" class="day-icon">
+                                <p class="card-text">Hugs that speak louder than words</p>
+                                <div class="music-player">
+                                    <h5>Today's Love Song</h5>
+                                    <p>"A Thousand Years" - Christina Perri</p>
+                                    <audio controls class="w-100">
+                                        <source src="songs/Christina Perri - A Thousand Years.mp3" type="audio/mpeg">
+                                        Your browser does not support the audio element.
+                                    </audio>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Kiss Day -->
+                        <div class="col-12 col-md-6 offset-md-3 mb-4">
+                            <div class="day-card">
+                                <h3 class="card-title">Kiss Day</h3>
+                                <img src="https://em-content.zobj.net/thumbs/120/apple/354/kiss-mark_1f48b.png" alt="Kiss" class="day-icon">
+                                <p class="card-text">Sealed with a kiss of pure love</p>
+                                <div class="music-player">
+                                    <h5>Today's Love Song</h5>
+                                    <p>"Kiss Me" - Sixpence None The Richer</p>
+                                    <audio controls class="w-100">
+                                        <source src="songs/Sixpence None The Richer - Kiss Me (Lyrics).mp3" type="audio/mpeg">
+                                        Your browser does not support the audio element.
+                                    </audio>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Valentine's Day -->
+                        <div class="col-12 col-md-6 offset-md-3 mb-4">
+                            <div class="day-card">
+                                <h3 class="card-title">Valentine's Day</h3>
+                                <img src="https://img.icons8.com/color/96/000000/heart-with-arrow.png" alt="Valentine" class="day-icon">
+                                <p class="card-text">Our love, forever and always</p>
+                                <div class="music-player">
+                                    <h5>Today's Love Song</h5>
+                                    <p>"Annie's Song" - John Denver</p>
+                                    <audio controls class="w-100">
+                                        <source src="songs/John Denver - Annie's Song (Official Audio).mp3" type="audio/mpeg">
+                                        Your browser does not support the audio element.
+                                    </audio>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="text-center mt-5">
+        <p>Made with endless love for Saqlain ❤️</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
