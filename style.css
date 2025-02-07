@@ -204,7 +204,7 @@ h1 {
     top: -10%;
     width: 10px;
     height: 10px;
-    background-color: random-color();
+    background-color: #ff4d6d;
     z-index: -1;
     animation: confetti-fall linear infinite;
 }
@@ -213,6 +213,22 @@ h1 {
     to {
         transform: translateY(105vh) rotate(360deg);
     }
+}
+
+.confetti-container .confetti:nth-child(1) {
+    background-color: #ff6b8a;
+}
+
+.confetti-container .confetti:nth-child(2) {
+    background-color: #ffa6c1;
+}
+
+.confetti-container .confetti:nth-child(3) {
+    background-color: #ffccd5;
+}
+
+.confetti-container .confetti:nth-child(4) {
+    background-color: #ff1a3f;
 }
 
 .music-player {
@@ -230,12 +246,6 @@ h1 {
 footer {
     margin-top: 2rem;
     color: #666;
-}
-
-/* Utility to generate random colors for confetti */
-@function random-color() {
-    $colors: #ff4d6d, #ff6b8a, #ffa6c1, #ffccd5, #ff1a3f;
-    @return nth($colors, random(length($colors)));
 }
 
 .day-card.music-section {
@@ -274,7 +284,7 @@ footer {
 }
 
 .day-card.music-section .music-player {
-    background-color: #f8f9fa;
+    background-color: #aedddd;
     border-radius: 10px;
     padding: 1rem;
     margin-top: 1rem;
@@ -312,6 +322,56 @@ footer {
         transform: translateY(-160vh) translateX(-5px) rotate(180deg);
         opacity: 0;
     }
+}
+
+.love-note {
+    background: linear-gradient(135deg, #ffe6f2, #ffb3d9) !important;
+    /* border: 2px solid #ff698a; */
+    /* box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); */
+    color: #e006bc;
+    font-weight: 500;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.love-details {
+    animation: fadeIn 1s ease-out;
+}
+
+.couple-image img {
+    transition: transform 0.3s ease;
+    max-height: 400px;
+    object-fit: cover;
+}
+
+.couple-image img:hover {
+    transform: scale(1.05);
+}
+
+.start-playlist-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.start-playlist-section .btn {
+    background-color: #ff69b4;
+    color: white;
+    border: 2px solid #ff1493;
+    transition: all 0.3s ease;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.start-playlist-section .btn:hover {
+    background-color: #ff1493;
+    transform: scale(1.05);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+.mt-2.text-muted {
+    color: #ff4d6d !important; /* Valentine's day themed color */
 }
 
 @media (max-width: 768px) {
