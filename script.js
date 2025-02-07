@@ -3,6 +3,8 @@ document.addEventListener('DOMContentLoaded', function() {
     const noButton = document.getElementById('noButton');
     const responseMessage = document.getElementById('responseMessage');
     const musicSection = document.getElementById('musicSection');
+    const startPlaylistSection = document.getElementById('startPlaylistSection');
+    const startPlaylistButton = document.getElementById('startPlaylistButton');
 
     // Sliding Hearts Animation
     function createSlidingHearts() {
@@ -92,19 +94,65 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 
     yesButton.addEventListener('click', function() {
+        // Remove any existing love details
+        const existingLoveDetails = document.querySelector('.love-details');
+        if (existingLoveDetails) {
+            existingLoveDetails.remove();
+        }
+        
         // Grow the yes button
         yesButton.style.transform = 'scale(1.2)';
         yesButton.style.backgroundColor = '#28a745';
         
         // Show response message
         responseMessage.classList.remove('d-none');
-        responseMessage.querySelector('h2').textContent = "Yay! Our Love Story Begins! 💕";
-        
-        // Reveal music section
+        responseMessage.innerHTML = `
+            <h2 class="text-success">Yes! Let's Celebrate Love! 💕</h2>
+        `;
+
+        // Create love note and couple image section
+        const loveDetailsSection = document.createElement('div');
+        loveDetailsSection.classList.add('love-details', 'mt-4', 'text-center');
+        loveDetailsSection.innerHTML = `
+            <div class="love-note p-4 bg-light rounded mx-auto" style="max-width: 600px;">
+                <p class="fst-italic">
+                    "From the moment our paths crossed, I knew you were something special. 
+                    This Valentine's Week is my way of showing you how much you mean to me. 
+                    Every song, every moment is dedicated to our love story."
+                </p>
+            </div>
+            <div class="couple-image mt-4">
+                <img src="WhatsApp Image 2025-02-07 at 6.53.26 PM.jpeg" alt="Our Love Story" class="img-fluid rounded shadow" style="max-width: 400px;">
+                <p class="mt-2 text-muted">A moment we'll always cherish ❤️</p>
+            </div>
+        `;
+
+        // Insert the new section after the response message
+        responseMessage.parentNode.insertBefore(loveDetailsSection, responseMessage.nextSibling);
+
+        // Show start playlist button
+        showStartPlaylistButton();
+    });
+
+    // After successful proposal response
+    function showStartPlaylistButton() {
+        startPlaylistSection.classList.remove('d-none');
+    }
+
+    // Start playlist button click handler
+    startPlaylistButton.addEventListener('click', function() {
         musicSection.classList.remove('d-none');
+        startPlaylistSection.classList.add('d-none');
         
-        // Create confetti effect
-        createConfetti();
+        // Optional: Add a subtle animation when playlist appears
+        musicSection.style.opacity = 0;
+        musicSection.style.transition = 'opacity 0.5s ease-in';
+        setTimeout(() => {
+            musicSection.style.opacity = 1;
+        }, 50);
+
+        // Highlight current day when playlist starts
+        highlightCurrentDay();
     });
 
     // Confetti effect
